@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX | GITHUB REPOS</title>
+    <link rel="stylesheet" href="/4_jquery/ajax_training_using_github_repo/css/style.css">
+</head>
+<body>
+    <script src="/4_jquery/js/jquery-1.8.2.min.js"></script>
+    <script src="/4_jquery/ajax_training_using_github_repo/js/script.js"></script>
+     
+    <div id="mainContainer">
+        <div id="userContainer">
+        </div>
+
+        <nav id="navigation">
+            <p>Popular repositories</p>
+            <ul id="repoList"></ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div id="wrapper">
+            <label for="table" class="tableLabel">List of Commits:</label>
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Message</th>
+                      </tr>
+                </thead>
+                <tbody id="commitsList">
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>

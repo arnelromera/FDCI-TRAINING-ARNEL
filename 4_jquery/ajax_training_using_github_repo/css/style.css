@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #1e1e1e;
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+}
+#mainContainer{
+    display: flex;
+    align-items: center;
+}
+#userContainer{
+}
+#userContainer img {
+    border-radius: 150px;
+}
+
+.userInfo {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+#navigation {
+    margin-left: 50px;
+    width: 100%;
+}
+#navigation p{
+    color: white;
+}
+#navigation li {
+    padding: 11px 15px 11px 10px;
+}
+
+#navigation li a {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: #3f8cf1;
+    display: block; 
+    padding: 1.5rem; 
+    text-decoration: none; 
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #646161;
+    text-align: center;
+}
+#navigation li :hover {
+    cursor: pointer;
+    background-color: grey;
+    opacity: 50%;
+}
+
+#repoList {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+.table {
+    margin: 5px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.tableLabel{
+    color: white;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+th {
+    background-color: #d9edf7;
+    color: #31708f;
+}
+
+#repoList {
+    column-count: 2;
+    column-gap: 20px;
+    list-style: none;
+    padding: 10px;
+}
+

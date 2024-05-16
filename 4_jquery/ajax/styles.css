@@ -1,0 +1,27 @@
+.product {
+    display: inline-block;
+    width: 30%; /* Adjust width as needed */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    vertical-align: top; /* Align products at the top */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
