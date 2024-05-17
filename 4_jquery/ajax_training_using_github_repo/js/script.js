@@ -2,6 +2,7 @@ $(document).ready(function(){
     const API_TOKEN = define.access_token;
     var baseUrl ='https://api.github.com/';
     var username = 'arnelromera';
+    $('#popularRepos').hide();
 
     $.ajax({
         'url': `${baseUrl}users/${username}`,
@@ -60,7 +61,13 @@ $(document).ready(function(){
         var repoListContainer = $('#repoList');
         
         repoListContainer.empty();
-        
+
+        if (repos.length > 0) {
+            $('#popularRepos').show();
+        } else {
+            $('#popularRepos').hide();
+        }
+
         repos.forEach(function(repo) { 
             var repoHTML = '<li class="repo">';
             repoHTML += '<a href="#" data-repo="' + repo.name + '">' + repo.name + '</a>';
@@ -86,8 +93,13 @@ $(document).ready(function(){
             headers: {'Authorization': 'token ' + API_TOKEN},
             dataType: 'json',
             success: function(commits) {
-                $('#commitsList').find('tr:gt(0)').remove();
-                displayCommits(commits);
+                console.log(commits);
+                    if (commits.length > 0) {
+                        $('#wrapper').show(); // Show the commit section if commits are found
+                        displayCommits(commits);
+                    } else {
+                        $('#wrapper').hide(); // Hide the commit section if no commits are found
+                    }
             },
             error: function(error) {
                 console.log(error);
@@ -105,6 +117,7 @@ $(document).ready(function(){
             commitHTML += '<td>' + commit.commit.author.name + '</td>';
             commitHTML += '<td>' + commit.commit.author.date + '</td>';
             commitHTML += '<td>' + commit.commit.message + '</td>';
+            // commitHTML += '<td>' + commit.commit.hmtl_url + '</td>';
             commitHTML += '</tr>';
 
             commitsListContainer.append(commitHTML);
