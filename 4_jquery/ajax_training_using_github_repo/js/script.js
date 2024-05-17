@@ -1,7 +1,7 @@
 $(document).ready(function(){
     const API_TOKEN = define.access_token;
     var baseUrl ='https://api.github.com/';
-    var username = 'arnelromera'
+    var username = 'arnelromera';
 
     $.ajax({
         'url': `${baseUrl}users/${username}`,
@@ -9,6 +9,7 @@ $(document).ready(function(){
         'headers': {'Authorization': 'token ' + API_TOKEN},
         'dataType': 'json',
         'success': function(results){
+            console.log(results);
             displayUser(results);
         },
         'error': function(error){
@@ -48,6 +49,7 @@ $(document).ready(function(){
         'headers': {'Authorization': 'token ' + API_TOKEN},
         'dataType': 'json',
         'success': function(results){
+            console.log(results);
             displayRepos(results);
         },
         'error': function(error){
@@ -66,7 +68,7 @@ $(document).ready(function(){
 
             repoListContainer.append(repoHTML);
         });
-        repoListContainer.on('click', 'a', function( e) {
+        repoListContainer.on('click', 'a', function(e) {
             e.preventDefault();
             var repoName = $(this).data('repo');
             if (repoName) {
