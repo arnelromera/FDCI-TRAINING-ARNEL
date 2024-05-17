@@ -66,7 +66,7 @@ $(document).ready(function(){
 
             repoListContainer.append(repoHTML);
         });
-        repoListContainer.on('click', 'a', function(e) {
+        repoListContainer.on('click', 'a', function( e) {
             e.preventDefault();
             var repoName = $(this).data('repo');
             if (repoName) {
