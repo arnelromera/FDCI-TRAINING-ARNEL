@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const API_TOKEN = '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';
+    const API_TOKEN = define.access_token;
     var baseUrl ='https://api.github.com/';
     var username = 'arnelromera'
 
@@ -9,7 +9,6 @@ $(document).ready(function(){
         'headers': {'Authorization': 'token ' + API_TOKEN},
         'dataType': 'json',
         'success': function(results){
-            console.log(results);
             displayUser(results);
         },
         'error': function(error){
@@ -49,7 +48,6 @@ $(document).ready(function(){
         'headers': {'Authorization': 'token ' + API_TOKEN},
         'dataType': 'json',
         'success': function(results){
-            console.log(results);
             displayRepos(results);
         },
         'error': function(error){
